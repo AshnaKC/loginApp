@@ -1,0 +1,45 @@
+<h1>Sign up</h1>
+<%- include ('./partials/messages') %>
+<form action="/users/register" method="POST" style="background-image:url(https://tse1.mm.bing.net/th?id=OIP.2K9jAFQOQJ_aC058fCKWagHaEK&pid=Api&P=0&w=5740&h=1540);padding: 100px; background-repeat: no-repeat;">
+<div>
+    <label for="name" style="font-size: larger;background-position: center; padding-right: 10px;margin-right: 10px;align-content: center;padding: 10px;">Name</label>
+    <input
+      type="name"
+      name="name"
+      placeholder="Enter Name"
+      value="<%= typeof name != 'undefined' ? name : '' %>"
+    />
+  
+</div>
+<div>
+    <label for="email" style="font-size: larger;margin-right: 10px;align-content: center;padding: 10px;">Email</label>
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter Email"
+      value="<%= typeof email != 'undefined' ? email : '' %>"
+    />
+  </div>
+  <div >
+    <label for="password" style="font-size: larger;margin-right: 10px;align-content: center;padding: 10px;">Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Create Password"
+      value="<%= typeof password != 'undefined' ? password : '' %>"
+    />
+  </div>
+  <div >
+    <label for="password2" style="font-size: larger;margin-right: 10px;align-content: center;padding: 10px;">Confirm Password</label>
+    <input
+      type="password"
+      name="password2"
+      placeholder="Confirm Password"
+      value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">
+    Signup
+  </button>
+</form>
+<p >Have An Account? <a href="/users/login">Login</a></p>
